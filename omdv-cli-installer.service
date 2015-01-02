@@ -1,14 +1,17 @@
 [Unit]
 Description=OpenMandriva Lx CLI installer
 DefaultDependencies=no
-After=livesys-late.service systemd-user-sessions.service getty@tty1.service plymouth-quit.service
-Conflicts=getty@tty1.service
+After=systemd-user-sessions.service plymouth-quit-wait.service
+Conflicts=getty@%i.service
 Conflicts=display-manager.serivce
 Before=display-manager.serivce
-
+Before=getty.target
+ConditionPathExists=/dev/tty0
 
 [Service]
-Type=simple
+Type=idle
+Restart=always
+RestartSec=0
 ConditionKernelCommandLine=|cliinstall
 ExecStart=/usr/bin/omdv-cli-install.sh
 ExecReload=/usr/bin/killall omdv-cli-install.sh
