@@ -1,1 +1,20 @@
-Here is a TODO list that will allow to implement new features.Basic functionalities:1. Start as a systemd service only when in /proc/cmdline contain "cliinstall" string2. All user interaction is based on dialog feature3. Add basic block devices /dev/[s,h]d* recognition4. Add block device partitioning feature5. Allow to format partition with major filesystems like ext4, btrfs, reiserfs4, f2fs etc.6. Check partition with fsck7. Allow swap creation8. Keymaps and language9. RAID setupInstallation functionalities:1. Allow copy live(squashfs) contents to block device(chroot) on installation hardware2. Allow net install - use "urpmi --root $blockdevice" to install software from $MIRRORLIST3. Allow to install RPM files with "urpmi --root $blockdevice" from squashfs from disc(CD/DVD), usb stick or any external storage4. Show installation progress with estimated ETA5. Install bootloader on block device6. Some basic configuration, like keyboard layout, user language
+Here is a TODO list that will allow to implement new features.
+
+Basic functionalities:
+1. Start as a systemd service only when in /proc/cmdline contain "cliinstall" string
+2. All user interaction is based on dialog feature
+3. Add basic block devices /dev/[s,h]d* recognition
+4. Add block device partitioning feature
+5. Allow to format partition with major filesystems like ext4, btrfs, reiserfs4, f2fs etc.
+6. Check partition with fsck
+7. Allow swap creation
+8. Keymaps and language
+9. RAID setup
+
+Installation functionalities:
+1. Allow copy live(squashfs) contents to block device(chroot) on installation hardware
+2. Allow net install - use "urpmi --root $blockdevice" to install software from $MIRRORLIST
+3. Allow to install RPM files with "urpmi --root $blockdevice" from squashfs from disc(CD/DVD), usb stick or any external storage
+4. Show installation progress with estimated ETA
+5. Install bootloader on block device
+6. Some basic configuration, like keyboard layout, user language
