@@ -18,3 +18,7 @@ Installation functionalities:
 4. Show installation progress with estimated ETA
 5. Install bootloader on block device
 6. Some basic configuration, like keyboard layout, user language
+
+
+Use idea from:
+https://github.com/lunar-linux/lunar-iso/blob/master/lunar-install/sbin/lunar-install
